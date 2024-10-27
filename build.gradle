@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'com.onkonfeon'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor "org.mapstruct:mapstruct-processor:1.5.5.Final"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
